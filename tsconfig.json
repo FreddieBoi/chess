@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "strictNullChecks": true,
+        "module": "es6",
+        "target": "esnext"
+    },
+    "include": [
+        "./src/ts/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

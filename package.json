@@ -1,0 +1,33 @@
+{
+  "name": "chess",
+  "version": "0.0.1",
+  "description": "simply chess",
+  "main": "index.js",
+  "repository": "https://github.com/FreddieBoi/chess.git",
+  "author": "Freddie <freddieboi@gmail.com>",
+  "license": "BEER-WARE",
+  "private": true,
+  "keywords": [
+    "chess"
+  ],
+  "contributors": [
+    {
+      "name": "Freddie",
+      "email": "freddieboi@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/FreddieBoi/chess/issues"
+  },
+  "devDependencies": {
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0"
+  },
+  "scripts": {
+    "build": "webpack -d --display-modules --progress",
+    "test": "tslint --project tsconfig.json"
+  }
+}
