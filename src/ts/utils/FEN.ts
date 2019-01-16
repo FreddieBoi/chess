@@ -1,10 +1,10 @@
-import { Board } from "./Board";
-import { ICastlingState } from "./Castling";
-import { Color } from "./Color";
-import { GameState } from "./GameState";
-import { Piece } from "./Piece";
-import { Square } from "./Square";
-import { ISquareState } from "./SquareState";
+import { Board } from "../state/Board";
+import { ICastlingState } from "../state/Castling";
+import { Color } from "../state/Color";
+import { GameState } from "../state/GameState";
+import { Piece } from "../state/Piece";
+import { Square } from "../state/Square";
+import { ISquareState } from "../state/SquareState";
 
 export function toColorFEN(color: Color): string {
     switch (color) {
