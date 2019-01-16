@@ -1,19 +1,6 @@
-import { Board } from "./Board";
-import { Color } from "./Color";
-import { GameState } from "./GameState";
+import { fromFEN, toFEN } from "./FEN";
 
-const gameState = new GameState(
-    new Board(),
-    Color.White,
-    {
-        isBlackKingsidePossible: false,
-        isBlackQueensidePossible: false,
-        isWhiteKingsidePossible: false,
-        isWhiteQueensidePossible: false,
-    },
-    null,
-    0,
-    1,
-);
+const gameState = fromFEN("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq e8 0 1", true);
+
 // tslint:disable-next-line: no-console
-console.log(gameState);
+console.log(toFEN(gameState));
