@@ -312,7 +312,7 @@ export function toFEN(state: GameState | null): string {
     const positions = toBoardFEN(state.board);
     const activeColor = toColorFEN(state.activeColor);
     const castling = toCastleFEN(state.castling);
-    const enPassant = toSquareFEN(state.enPassant);
+    const enPassant = toSquareFEN(state.enPassantSquare);
     const halfMoveCount = state.halfMovesCountSinceLastCapture;
     const fullMoveNumber = state.fullMoveNumber;
     return `${positions} ${activeColor} ${castling} ${enPassant} ${halfMoveCount} ${fullMoveNumber}`;
@@ -396,7 +396,7 @@ export function isFENValid(fen: string, log: boolean): boolean {
         return false;
     }
 
-    // Validate en passant
+    // Validate en passant square
     if (!isValidSquareFEN(fenParts[3])) {
         if (log) {
             // tslint:disable-next-line: no-console
@@ -416,13 +416,13 @@ export function isFENValid(fen: string, log: boolean): boolean {
         return false;
     }
 
-    // Validate full move number
+    // Validate full-move number
     const fullMoveNumber = parseInt(fenParts[5], 10);
     if (isNaN(fullMoveNumber) ||
         fullMoveNumber < 1) {
         if (log) {
             // tslint:disable-next-line: no-console
-            console.error("Invalid full move number in FEN!");
+            console.error("Invalid full-move number in FEN!");
         }
         return false;
     }

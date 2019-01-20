@@ -20,6 +20,12 @@
     "url": "https://github.com/FreddieBoi/chess/issues"
   },
   "devDependencies": {
+    "@types/react": "^16.7.20",
+    "@types/react-dom": "^16.0.11",
+    "css-loader": "^2.1.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
     "tslint": "^5.12.0",
     "typescript": "^3.2.2",
@@ -29,5 +35,9 @@
   "scripts": {
     "build": "webpack -d --display-modules --progress",
     "test": "tslint --project tsconfig.json"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   }
 }

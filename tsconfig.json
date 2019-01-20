@@ -5,8 +5,9 @@
         "noImplicitAny": true,
         "removeComments": true,
         "strictNullChecks": true,
-        "module": "es6",
-        "target": "esnext"
+        "module": "esnext",
+        "target": "esnext",
+        "jsx": "react",
     },
     "include": [
         "./src/ts/**/*"

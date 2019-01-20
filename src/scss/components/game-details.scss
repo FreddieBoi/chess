@@ -1,0 +1,15 @@
+.game-details {
+    display: inline-block;
+    margin-left: 1rem;
+
+    dl {
+        dt {
+            font-weight: bold;
+        }
+        dd {
+            font-size: 2rem;
+            margin-left: 0;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

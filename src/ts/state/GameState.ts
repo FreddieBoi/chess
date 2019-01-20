@@ -11,7 +11,7 @@ export class GameState {
 
     public castling: ICastlingState;
 
-    public enPassant: Square | null;
+    public enPassantSquare: Square | null;
 
     public halfMovesCountSinceLastCapture: number;
 
@@ -28,7 +28,7 @@ export class GameState {
         this.board = board;
         this.activeColor = activeColor;
         this.castling = castling;
-        this.enPassant = enPassant;
+        this.enPassantSquare = enPassant;
         this.halfMovesCountSinceLastCapture = halfMovesCountSinceLastCapture;
         this.fullMoveNumber = fullMoveNumber;
     }
