@@ -1,7 +1,7 @@
 import * as React from "react";
 import { GameState } from "../state/GameState";
 import { toBoardProps } from "../utils/Props";
-import { toColorName, toSquareName } from "../utils/Translation";
+import { toCastlingIcons, toColorName, toSquareName } from "../utils/Translation";
 import "./../../scss/components/app.scss";
 import { Board } from "./Board";
 import { GameDetails } from "./GameDetails";
@@ -26,6 +26,7 @@ export class App extends React.Component<IAppProps> {
                 {this.props.gameState
                     ? <GameDetails
                         activeColor={toColorName(this.props.gameState.activeColor)}
+                        castlingIcons={toCastlingIcons(this.props.gameState.castling)}
                         enPassantSquare={toSquareName(this.props.gameState.enPassantSquare)}
                         halfMovesCountSinceLastCapture={this.props.gameState.halfMovesCountSinceLastCapture.toString()}
                         fullMoveNumber={`# ${this.props.gameState.fullMoveNumber}`}

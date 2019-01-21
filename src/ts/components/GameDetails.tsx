@@ -3,6 +3,7 @@ import "./../../scss/components/game-details.scss";
 
 export interface IGameDetailsProps {
     activeColor: string;
+    castlingIcons: string;
     enPassantSquare: string;
     halfMovesCountSinceLastCapture: string;
     fullMoveNumber: string;
@@ -18,6 +19,8 @@ export class GameDetails extends React.Component<IGameDetailsProps> {
                 <dl>
                     <dt>Active color</dt>
                     <dd>{this.props.activeColor}</dd>
+                    <dt>Castling availability</dt>
+                    <dd>{this.props.castlingIcons}</dd>
                     <dt>En passant square</dt>
                     <dd>{this.props.enPassantSquare}</dd>
                     <dt>Half-moves since last capture</dt>
