@@ -10,7 +10,7 @@ export function toColorName(color: Color): string {
         case Color.Black:
             return "Black \u265A";
     }
-    return "Unknown";
+    return "-";
 }
 
 export function toSquareName(square: Square | null): string {
@@ -19,7 +19,7 @@ export function toSquareName(square: Square | null): string {
             .split("")
             .join(" ")
             .toUpperCase()
-        : "None";
+        : "-";
 }
 
 export function toFileName(file: number): string {
