@@ -39,8 +39,18 @@ export function toBoardProps(board: Board): IBoardProps {
     };
 }
 
+export function isSquareDark(file: string, rank: string): boolean {
+    return parseInt(`${file.toLowerCase()}${rank}`, 35) % 2 !== 0;
+}
+
 export function toSquareColor(file: string, rank: string): string {
-    return parseInt(`${file.toLowerCase()}${rank}`, 35) % 2
+    return isSquareDark(file, rank)
         ? "dark"
         : "light";
+}
+
+export function toBoardLabelColor(file: string, rank: string): string {
+    return isSquareDark(file, rank)
+        ? "light"
+        : "dark";
 }

@@ -1,6 +1,42 @@
+$square-size: 5rem;
+$board-size: 8 * $square-size;
+$board-labels-size: 1rem;
+$board-border-size: 0.2rem;
+$board-side-offset-small: 0.4rem;
+$board-side-offset-large: 4.2rem;
+
 .board {
-    float: left;
-    min-width: 5*8rem;
-    min-height: 5*8rem;
-    border: 0.2rem solid black;
+    max-width: $board-size;
+    max-height: $board-size;
+    position: absolute;
+    display: inline-block;
+
+    .board-top {
+        top: $board-side-offset-small;
+        left: $board-side-offset-large;
+        position: absolute;
+        min-width: $board-size;
+
+        .board-label {
+            display: inline-block;
+            width: $square-size;
+        }
+    }
+
+    .board-left {
+        top: $board-side-offset-large;
+        left: $board-side-offset-small;
+        position: absolute;
+        min-height: $board-size;
+
+        .board-label {
+            height: $square-size;
+        }
+    }
+
+    .board-inner {
+        min-width: $board-size;
+        min-height: $board-size;
+        border: $board-border-size solid black;
+    }
 }

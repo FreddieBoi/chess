@@ -1,0 +1,11 @@
+.board-label {
+    font-size: 0.7rem;
+
+    &.board-label-dark {
+        color: gray;
+    }
+
+    &.board-label-light {
+        color: white;
+    }
+}
